@@ -1,0 +1,67 @@
+:root{
+    --celeste : rgb(39, 39, 39);
+}
+form{
+    width: calc(100vw - 20%);
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  
+}
+.caja_principal{
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.entrada_formulario{
+    height: 32px;
+    width:250px;
+    font-size: 150%;
+    font-weight: 100;
+    outline: none;
+    padding: 12px;
+    border-radius: 12px;
+    color: var(--celeste);
+    border: solid rgb(1, 125, 226) 1px;
+    padding-right: 7rem;
+}
+.entrada_formulario:focus{
+    border: rgb(1, 125, 226) 1px solid;
+    outline: none;
+    
+}
+button[type="submit"]{
+    font-size: 18px;
+}
+.buscador{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    width: auto;
+    right: 0px;
+    left: 0px;
+
+}
+.btn_buscar{
+    width: 90px;
+    height: 45px;
+    position: absolute;
+    right: 6px;
+    top: 7px;
+    border-radius: 12px;
+    border: none;
+    color: white;
+    background-color: rgb(68, 155, 226);
+}
+.div_main_buscador{
+   
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

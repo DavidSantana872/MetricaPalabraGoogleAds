@@ -7,7 +7,7 @@
         </x-header>
         <div class="div_main_buscador">
             <div class="buscador">
-                <input  placeholder="Inserta la palabra" class="entrada_formulario" type="text" id="palabra_formulario" >
+                <input required  placeholder="Inserta la palabra" class="entrada_formulario" type="text" id="palabra_formulario" >
                 <button id="buscar" type="submit" class="btn_buscar">Buscar</button>
             </div>
           

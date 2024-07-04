@@ -1,66 +1,60 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 📈 Obtención del Volumen de Búsqueda de una Palabra Clave usando Google Ads API, Laravel, jQuery y Python
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 📋 Descripción General
+Este proyecto es una aplicación web que permite a los usuarios ingresar una palabra clave y obtener su volumen de búsqueda utilizando la API de Google Ads. La interfaz de usuario está construida con Laravel y Blade templates, y la interacción del usuario se maneja con jQuery. El procesamiento de la solicitud y la obtención de datos de la API se realizan mediante un script en Python.
 
-## About Laravel
+## 🛠 Herramientas Utilizadas
+- ![Laravel](https://img.shields.io/badge/-Laravel-F55247?logo=laravel&logoColor=white) **Laravel**: Para el backend y la creación de la interfaz de usuario.
+- ![Blade](https://img.shields.io/badge/-Blade%20Templates-FF2D20?logo=laravel&logoColor=white) **Blade templates**: Para el diseño de la página web.
+- ![jQuery](https://img.shields.io/badge/-jQuery-0769AD?logo=jquery&logoColor=white) **jQuery**: Para manejar la interacción del usuario y actualizar dinámicamente la interfaz.
+- ![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white) **Python**: Para procesar la solicitud y obtener datos de la API de Google Ads.
+- ![Google Ads API](https://img.shields.io/badge/-Google%20Ads%20API-4285F4?logo=googleads&logoColor=white) **Google Ads API**: Para obtener el volumen de búsqueda de la palabra clave.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 📦 Instalación
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Requisitos Previos
+- PHP
+- Composer
+- Python
+- Credenciales de Google Ads API
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Pasos
+1. Crear Cuenta de Google Ads
+   https://ads.google.com/intl/es-419_ALL/home/
+2. Nos Dirigimos al siguiente enlace
+   https://console.cloud.google.com/apis/dashboard?hl=es-419&project=solicitud-de-api
 
-## Learning Laravel
+   Aqui necesitamos crear un proyecto
+   ![image](https://github.com/DavidSantana872/MetricaPalabraGoogleAds/assets/86623205/cbc8e03a-fee9-4902-a27a-a2c5f33d0df1)
+   // Rellenamos los campos necesarios
+3. Ahora habilitamos la API
+ ![image](https://github.com/DavidSantana872/MetricaPalabraGoogleAds/assets/86623205/eab363ab-e050-431e-97c2-93d0ba6170f7)
+Buscamos la API de Google Ads
+![image](https://github.com/DavidSantana872/MetricaPalabraGoogleAds/assets/86623205/c1eb647c-6c3a-42ea-a2ef-e5c71b9cc567)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Presionamos Habilitar API 
+![image](https://github.com/DavidSantana872/MetricaPalabraGoogleAds/assets/86623205/89a01fa6-2a29-405a-81c9-78797208c5d7)
+(Yo ya la tengo habilitada)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+4. Generar Credenciales cliente OAUTH 2
+   ![image](https://github.com/DavidSantana872/MetricaPalabraGoogleAds/assets/86623205/c7e1130c-6cc5-44dd-8a5b-5a9e0847b573)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Como nuestro script de python sera el encargado de hacer solitudes, seleccionaremos que es Aplicacion de escritorio 
+![image](https://github.com/DavidSantana872/MetricaPalabraGoogleAds/assets/86623205/2837bad5-50a4-4af8-8e3a-a2b21d008684)
 
-## Laravel Sponsors
+Genrado esto nos aparece lo siguiente 
+![image](https://github.com/DavidSantana872/MetricaPalabraGoogleAds/assets/86623205/ab3e68f3-3e71-4039-b076-3120744962b7)
+Descargamos el JSON que tiene parte de las credenciales.
+5. Ahora para autorizar clonamos el repositorio 
+https://github.com/googleads/google-ads-python
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+y nos dirigimos a la carpeta /example
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
 
-## Contributing
+   ![image](https://github.com/DavidSantana872/MetricaPalabraGoogleAds/assets/86623205/743d9378-634a-4b19-9bd9-267a16c529e0)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+1. Configuracion Google Ads API:
+    ```bash
+        git clone https://github.com/googleads/google-ads-python
+    ```

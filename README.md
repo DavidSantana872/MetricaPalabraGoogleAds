@@ -57,7 +57,7 @@ Este proyecto es una aplicación web que permite a los usuarios ingresar una pal
 Instalar libreria de python para peticion a la api Google Ads 
 
 5.  ```
-      python -m pip install google-ads
+      python3 -m pip install google-ads
     ```
 ### Pasos
 

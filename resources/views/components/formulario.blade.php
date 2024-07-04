@@ -26,7 +26,7 @@
             var palabra = $('#palabra_formulario').val();
             $("#Loader").show()
 
-            // Petición AJAX
+            // Peticion AJAX
             $.ajax({
                 url: '/api/procesar-estadistica',
                 type: 'POST',

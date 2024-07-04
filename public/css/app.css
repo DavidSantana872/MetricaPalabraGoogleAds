@@ -126,7 +126,8 @@
 }
 .valor_descripcion_varia{
     color: rgba(255, 255, 255, 0.836);
-    font-size: 4rem;
+    font-size: 3rem;
+    padding: 1rem;
     text-align: center;
 }
 .mensual_busqueda_valor{

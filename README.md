@@ -54,9 +54,9 @@ Este proyecto es una aplicación web que permite a los usuarios ingresar una pal
       php artisan serve 
     ```
 Instalar libreria de python para peticion a la api Google Ads 
-5. ```bash 
+5.  ```bash
       python -m pip install google-ads
-   ```
+    ```
 ### Pasos
 
 1. **Crear Cuenta de Google Ads**
